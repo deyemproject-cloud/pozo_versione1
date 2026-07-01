@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Il menù del Pozzo American Bar — Pavia. Cocktail d'autore, signature, gin tonic, analcolici e molto altro.">
+  <title>Menù — Pozzo American Bar</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <a href="#menu" class="skip-link">Vai al menù</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html#hero" class="navbar__logo">Pozzo</a>
+    <button class="navbar__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar__links" id="navLinks">
+      <li><a href="index.html#chi-siamo">Chi siamo</a></li>
+      <li><a href="index.html#cocktail">Cocktail</a></li>
+      <li><a href="menu.html" class="active">Menù</a></li>
+      <li><a href="index.html#orari">Orari</a></li>
+      <li><a href="index.html#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO TITLE -->
+  <section class="menu-hero">
+    <span class="menu-hero__kicker">American Bar · dal 1983</span>
+    <h1 class="menu-hero__title">Il nostro <span class="accent">menù</span></h1>
+    <p class="menu-hero__quote">&ldquo;Entusiasmo e Tenacia. Senza queste due doti, il talento va sprecato&rdquo;</p>
+  </section>
+
+  <!-- TAB BAR -->
+  <div class="tabbar" id="tabbar">
+    <div class="tabbar__inner">
+      <button class="tab-btn active" data-tab="signature" onclick="switchTab('signature')">Signature</button>
+      <button class="tab-btn" data-tab="classici" onclick="switchTab('classici')">Classici</button>
+      <button class="tab-btn" data-tab="negroni" onclick="switchTab('negroni')">Negroni</button>
+      <button class="tab-btn" data-tab="gintonic" onclick="switchTab('gintonic')">Gin Tonic</button>
+      <button class="tab-btn" data-tab="pestati" onclick="switchTab('pestati')">Pestati &amp; Colada</button>
+      <button class="tab-btn" data-tab="worlds" onclick="switchTab('worlds')">World&rsquo;s Selection</button>
+      <button class="tab-btn" data-tab="analcolici" onclick="switchTab('analcolici')">Analcolici</button>
+    </div>
+  </div>
+
+  <main class="menu" id="menu">
+
+    <!-- ===== SIGNATURE ===== -->
+    <section class="tab-content active" id="signature">
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">Pozzo Signature</h2><span class="menu-cat__price">9 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Gin-Ozzo</span></div><p class="menu-item__desc">London Dry Gin, Lime, Zucchero, Acqua Tonica, Ginepro, Cetriolo, Zenzero</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">M.B.C.</span></div><p class="menu-item__desc">Maracuja fresco, Succo ACE, Passoa, Bitter Campari e Vodka</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Brezza Del Monferrato</span></div><p class="menu-item__desc">London Dry Gin, Vermouth Classico Martelletti, Sciroppo Fragola Fabbri</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Modena Friends</span></div><p class="menu-item__desc">Aceto Balsamico, Vermouth Bianco, Succo Ananas</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Self</span></div><p class="menu-item__desc">Vermouth Dry, Kinley Bitter Lemon, Foglie di Menta, Ghiaccio a Scaglie</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Salvy</span></div><p class="menu-item__desc">Rabarbaro, Zucca, Kinley Bitter Lemon, Foglie di Salvia</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Casanova</span></div><p class="menu-item__desc">Vermouth Extra Dry Cinzano, Fragole Fresche, Lime a Pezzi, Zucchero di Canna Bianco</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Mara-Pisco</span></div><p class="menu-item__desc">IncaPisco, Crème de Cassis, Liquore alla Pesca, Maracuja Fresco</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Cinzano Blues</span></div><p class="menu-item__desc">Vermouth Bianco Cinzano, Vodka, DiSaronno, Scorza Limone</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Well Done</span></div><p class="menu-item__desc">Sciroppo di Zucchero e Succo di Limone, Southern Comfort, Disaronno e Vodka</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Colorado Rhino</span></div><p class="menu-item__desc">Vodka, Liquore al caffè, Zabajone della Gelateria Romea</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">ERIKA <span class="tag">by Mattia Pastori</span></span></div><p class="menu-item__desc">Vodka, Salvia, Scorza di Limone, Lime, Zucchero, Tonica</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Peach-one <span class="tag">si pronuncia PICCIONE</span></span></div><p class="menu-item__desc">Vodka e pesca, Sciroppo di Lampone, Kinley Bitter Lemon</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Bianca Edmea <span class="tag">Sig.ra Cedrini</span></span></div><p class="menu-item__desc">N.B. molto digestivo — Brancamenta, Goccia di Pernod, Schweppes Ginger Ale, Scorza di Cetriolo, Spicchio d&rsquo;Arancia, Lime, Germoglio Menta</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Light Sex</span></div><p class="menu-item__desc">Vodka e Pesca, Cranberry Juice, Coca-Cola</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Chi Hua-Hua</span></div><p class="menu-item__desc">Liquore al Caffè, Rum Scuro, Coca-Cola, Spruzzo di Lime, decorazione con Chupa-Chups</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Red Emotion</span></div><p class="menu-item__desc">Vodka e Pesca, Succo ACE, Sciroppo Fragola, Fanta Orange</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Basil-Jito</span></div><p class="menu-item__desc">Zucchero Bianco, Vodka, Kinley Bitter Lemon, Spicchi di Lime, Foglie di Basilico</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Re....nato <span class="tag">Ri...nato Special</span></span></div><p class="menu-item__desc">Spicchio di Lime, Foglie di Basilico, Zucchero di Canna Bianco, Succo di Pompelmo, Vodka, Kinley Bitter Lemon — decorazione: Arancia e Basilico</p></article>
+        </div>
+      </div>
+
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">Low Alcohol</h2><span class="menu-cat__price">7 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Una Cosa Buona</span></div><p class="menu-item__desc">Sciroppo di zucchero, Succo di limone, Malvasia aromatica secca Valentina [12.5%], Liquore alla menta, Ginger Ale</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Red Red Wine</span></div><p class="menu-item__desc">Vino ai Frutti Rossi, Soda al Pompelmo Rosa</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLASSICI ===== -->
+    <section class="tab-content" id="classici">
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">After</h2><span class="menu-cat__price">8 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Alexander</span></div><p class="menu-item__desc">Panna Fresca, Crema di Cacao Scura, Cognac</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Alaska</span></div><p class="menu-item__desc">London Dry Gin, Chartreuse Gialla, Orange Bitter</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Daiquiri</span></div><p class="menu-item__desc">Havana 3 años, Succo di Lime, Sciroppo di Zucchero</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Godmother</span></div><p class="menu-item__desc">Vodka, Disaronno Originale</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Godfather</span></div><p class="menu-item__desc">Scotch Whisky, Disaronno Originale</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Kamikaze</span></div><p class="menu-item__desc">Vodka, Triple Sec, Succo di lime/limone</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Rusty Nail</span></div><p class="menu-item__desc">Scotch Whisky, Drambuie</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Old Fashioned</span></div><p class="menu-item__desc">Bourbon Whisky, Zolletta di Zucchero con Angostura, Selz</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Sidecar</span></div><p class="menu-item__desc">Cognac, Cointreau, Succo di lime/limone</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Savoy Corpse Reviver</span></div><p class="menu-item__desc">Cognac, Fernet Branca, Crema di Menta Bianca</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Scarlet O&rsquo;Hara</span></div><p class="menu-item__desc">Southern Comfort, Succo di lime/limone, Sciroppo di Lampone</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Stinger</span></div><p class="menu-item__desc">Cognac, Crema di Menta Bianca</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">White Russian</span></div><p class="menu-item__desc">Vodka, Liquore al Caffè, Panna Fresca (non montata)</p></article>
+        </div>
+      </div>
+
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">Long</h2><span class="menu-cat__price">9 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Fusettone</span></div><p class="menu-item__desc">Bitter Fusetti, Soda al Pompelmo</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Horse&rsquo;s Neck <span class="tag">with the kick</span></span></div><p class="menu-item__desc">Rye Whiskey, Angostura, Schweppes Ginger Ale, lunga scorza di limone</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Horse&rsquo;s Neck <span class="tag">versione inglese</span></span></div><p class="menu-item__desc">Cognac, Angostura, Schweppes Ginger Ale, lunga scorza di limone</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Singapore Sling</span></div><p class="menu-item__desc">London Dry Gin, Cherry Brandy, Succo di lime/limone, Seltz</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Tequila Sunrise</span></div><p class="menu-item__desc">Tequila Blanco, Succo d&rsquo;Arancia, Sciroppo di Granatina</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Cuba Libre</span></div><p class="menu-item__desc">Havana Club 3 años, Spruzzo di lime, Coca-Cola — N.B. preparato dal barman, prezzo subordinato al tipo di Rum</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Rum Highball o altri distillati</span></div><p class="menu-item__desc">Rum o altri distillati con allungante a scelta a parte — N.B. preparato dal cliente</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Salty Dog</span></div><p class="menu-item__desc">Vodka Bianca, Succo di Pompelmo, Bordatura di sale</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Paloma</span></div><p class="menu-item__desc">Tequila Blanco, Succo di Pompelmo, Sciroppo d&rsquo;Agave, Succo di Lime, Soda al Pompelmo</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Mai-Tai</span></div><p class="menu-item__desc">Blend di Rum, Orange Curacao, Falernum, Succo di Lime</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Mint-Julep</span><span class="menu-item__price">10 €</span></div><p class="menu-item__desc">Bourbon Whiskey, Menta Fresca e Zucchero di canna Bianco pestati nel mortaio e passati con colino. Decorazione: Germoglio di Menta con Zucchero</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Long Island Ice Tea</span></div><p class="menu-item__desc">Vodka, Gin, White Rum, Triple Sec, Sciroppo di Zucchero e Succo di Limone, Coca-Cola</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Texas Ice Tea</span></div><p class="menu-item__desc">Vodka, Gin, White Rum, Tequila, Sciroppo di Zucchero e Succo di Limone, Coca-Cola</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Sex on the Beach</span></div><p class="menu-item__desc">Vodka, Peach Tree, Cranberry Juice, Succo d&rsquo;Arancia</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Midori on the Beach</span></div><p class="menu-item__desc">Vodka, Midori, Cranberry Juice, Succo d&rsquo;Arancia Gialla</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Sea Breeze</span></div><p class="menu-item__desc">Vodka, Succo di Pompelmo, Succo di Cranberry</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Planters Punch Special</span></div><p class="menu-item__desc">Rum Scuro, Succo d&rsquo;Arancia, Succo di lime/limone, Sciroppo di Granatina, Seltz</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEGRONI ===== -->
+    <section class="tab-content" id="negroni">
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">Negroni Style</h2><span class="menu-cat__price">8 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Negroni</span></div><p class="menu-item__desc">London Dry Gin, Vermouth Rosso, Bitter Campari</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Cedrini</span></div><p class="menu-item__desc">Havana Club 3 años, Vermouth Rosè, Bitter Campari</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">White Negroni</span></div><p class="menu-item__desc">Vermouth Dry, Suze Bitter, Jenever</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Negroni del Marinaio</span><span class="menu-item__price">9 €</span></div><p class="menu-item__desc">Vermouth Rosso, Bitter Fusetti, Mezcal, Liquore al Caffè</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Boulevardier</span></div><p class="menu-item__desc">Vermouth Rosso, Bitter Campari, Bourbon Whiskey</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Nuvolari <span class="tag">by Carmine Lamorte</span></span></div><p class="menu-item__desc">Bitter Campari, Vodka, Mirto</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GIN TONIC ===== -->
+    <section class="tab-content" id="gintonic">
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">Gin Tonic — Pozzo Selection</h2><span class="menu-cat__price">10 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Nordès</span></div><span class="menu-item__country">Galizia</span><p class="menu-item__desc">Salvia, Menta, Ibisco, Tè</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Fabbri</span></div><span class="menu-item__country">Emilia Romagna</span><p class="menu-item__desc">Amarena</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Canaima</span></div><span class="menu-item__country">Venezuela</span><p class="menu-item__desc">Maracuja, Acaj, Cacao e Botaniche Amazzoniche</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Boodles</span></div><span class="menu-item__country">Regno Unito</span><p class="menu-item__desc">Salvia, Rosmarino, Noce moscata</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Roku</span></div><span class="menu-item__country">Giappone</span><p class="menu-item__desc">Sakura, Tè Sencha, Peperone, Yuzu</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Bareksten</span><span class="menu-item__price">12 €</span></div><span class="menu-item__country">Norvegia</span><p class="menu-item__desc">12 Botaniche Classiche</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Ginarte</span></div><span class="menu-item__country">Toscana</span><p class="menu-item__desc">Lavanda, Pino Mugo, Fiori di Sambuco</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Più Cinque</span></div><span class="menu-item__country">Veneto</span><p class="menu-item__desc">Salvia, Zenzero, Iris</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PESTATI & COLADA ===== -->
+    <section class="tab-content" id="pestati">
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">Pestati</h2><span class="menu-cat__price">8 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <p class="menu-cat__sub">Pozzo&rsquo;s Signature</p>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Pazzo Pozzo-Pozzo Pazzo</span></div><p class="menu-item__desc">Cachaça, Vermouth Dry, spruzzo Apricot Brandy, Mandarino, Lime, Zucchero di canna bianco pestati</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Caipiorange</span></div><p class="menu-item__desc">Lime e Arancia a pezzi, Zucchero di canna, Vodka, Succo ACE</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Lond-ihna</span></div><p class="menu-item__desc">London Dry Gin, Lime a pezzi, Zucchero di canna</p></article>
+        </div>
+        <p class="menu-cat__sub">Classici</p>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Caipirinha</span></div><p class="menu-item__desc">Lime a pezzi, Zucchero di canna, Cachaça</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Caipiroska</span></div><p class="menu-item__desc">Lime a pezzi, Zucchero di canna, Vodka</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Caipi-Frutta</span></div><p class="menu-item__desc">Come sopra con frutta fresca preferita</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Caipirissima</span></div><p class="menu-item__desc">Con il Vostro Rum preferito — prezzo subordinato al tipo di Rum scelto</p></article>
+        </div>
+      </div>
+
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">Colada&rsquo;s</h2><span class="menu-cat__price">8 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Pina Colada Special</span></div><p class="menu-item__desc">Rum Scuro, Latte di Cocco, Succo d&rsquo;Ananas e Ananas Fresca, Latte Condensato</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Pinky Colada</span></div><p class="menu-item__desc">Rum Bianco, Latte di Cocco, Fragole Frullate, Succo d&rsquo;Ananas</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Cio - Colada</span></div><p class="menu-item__desc">Rum Scuro, Latte di Cocco, Crema di Cacao Scura, Succo d&rsquo;Ananas</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Amaretto Colada</span></div><p class="menu-item__desc">Rum Scuro, Latte di Cocco, Disaronno Originale, Succo d&rsquo;Ananas</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORLD'S SELECTION ===== -->
+    <section class="tab-content" id="worlds">
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">World&rsquo;s Selection</h2><span class="menu-cat__price">PRE · 8 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Americano</span></div><p class="menu-item__desc">Vermouth Rosso, Bitter Campari, Seltz</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Cosmopolitan</span></div><p class="menu-item__desc">Vodka, Cointreau, Cranberry Juice, Cordial Lime</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Basil Smash</span></div><p class="menu-item__desc">Sciroppo di Zucchero e Succo di Limone, London Dry Gin, Foglie di Basilico</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Manhattan</span><span class="menu-item__price">9 €</span></div><p class="menu-item__desc">Rye Whiskey, Vermouth Rosso, Angostura</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Red Snapper</span><span class="menu-item__price">10 €</span></div><p class="menu-item__desc">Succo di Pomodoro condito e Gin Mare</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Porno Star Martini</span><span class="menu-item__price">10 €</span></div><p class="menu-item__desc">Sciroppo di Zucchero e Succo di Limone, Maracuja fresco, Vaniglia, Passoa, Vodka — Prosecco a parte</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Paper Plane</span></div><p class="menu-item__desc">Bourbon Whiskey, Aperol, Amaro Nonino, Succo di Lime</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">French 75</span></div><p class="menu-item__desc">Sciroppo di zucchero e Succo di Limone, London Dry Gin, Spumante Metodo Classico</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Gimlet</span></div><p class="menu-item__desc">Rose&rsquo;s Lime Juice Cordial, London Dry Gin, Seltz</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Martinez</span></div><p class="menu-item__desc">London Dry Gin, Vermouth rosso, Maraschino e Orange Bitter</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Garibaldi</span></div><p class="menu-item__desc">Campari, Spremuta d&rsquo;Arancia</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Margarita</span></div><p class="menu-item__desc">Tequila Blanco, Succo di Lime, Triple Sec e bordatura di sale</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Tommy&rsquo;s Margarita</span></div><p class="menu-item__desc">Tequila Blanco, Succo di Lime, Sciroppo d&rsquo;Agave</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ANALCOLICI ===== -->
+    <section class="tab-content" id="analcolici">
+      <div class="menu-cat">
+        <div class="menu-cat__head"><h2 class="menu-cat__title">Analcolici</h2><span class="menu-cat__price">7 €</span></div>
+        <div class="menu-cat__rule"></div>
+        <p class="menu-cat__sub">World&rsquo;s Selection</p>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Florida</span></div><p class="menu-item__desc">Succo di Pompelmo, Succo d&rsquo;arancia, Succo di limone/lime, Sciroppo di zucchero, Seltz e menta</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Shirley Temple <span class="tag">versione Americana</span></span></div><p class="menu-item__desc">Succo di limone/lime, sciroppo di granatina, Schweppes Ginger Ale</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Virgin Mary</span></div><p class="menu-item__desc">Succo di pomodoro condito</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Horse&rsquo;s Neck originale</span></div><p class="menu-item__desc">Angostura, Schweppes Ginger Ale, lunga scorza di limone</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Virgin Colada special</span></div><p class="menu-item__desc">Latte di Cocco, Succo d&rsquo;ananas, Latte condensato</p></article>
+        </div>
+        <p class="menu-cat__sub">Pozzo&rsquo;s Signature</p>
+        <div class="menu-grid">
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Tanqueray 0.0% Tonic</span></div><p class="menu-item__desc">Coriandolo, Ginepro, Angelica, Liquirizia</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Re...Nato Analcolico</span></div><p class="menu-item__desc">Succo di lime, Foglie di basilico, Zucchero di canna bianco, Succo di pompelmo, Tonica, Lemonsoda</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Pozzo new Age</span></div><p class="menu-item__desc">Succo di lime, Succo ai frutti di bosco, Succo d&rsquo;arancia, Sciroppo alla mela verde, Kinley Bitter Lemon</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Kiwi-Exotic</span></div><p class="menu-item__desc">Succo di lime, Succo di ananas e Tropicale, Sciroppo di kiwi, Fanta Orange</p></article>
+          <article class="menu-item"><div class="menu-item__top"><span class="menu-item__name">Raspberry Kiss</span></div><p class="menu-item__desc">Cranberry Juice, Sciroppo di lampone, Succo d&rsquo;arancia e limone, Seltz</p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TEAM + CONTACTS -->
+  <section class="menu-team">
+    <div>
+      <h2 class="menu-team__title">Il team</h2>
+      <div class="menu-team__people">
+        <p class="menu-team__person">Andrea Bracci <span>· Barman</span></p>
+        <p class="menu-team__person">Simone Sfondrini <span>· Service Manager</span></p>
+        <p class="menu-team__person">Valeria Zanotti <span>· Service Assistant</span></p>
+      </div>
+    </div>
+    <div class="menu-team__contacts">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        C.so Strada Nuova 4/c, 27100, Pavia
+      </p>
+      <a href="tel:+39038233111">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.12.96.36 1.9.72 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.36 1.85.6 2.81.72A2 2 0 0122 14.92v2z"/></svg>
+        +39 0382 33 111
+      </a>
+      <a href="https://www.pozzoamericanbar.it" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        www.pozzoamericanbar.it
+      </a>
+      <a href="https://www.instagram.com/pozzodal1983" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @pozzodal1983
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Pozzo American Bar &mdash; Pavia</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

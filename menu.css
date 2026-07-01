@@ -1,0 +1,238 @@
+/* ============================================================
+   POZZO — Menu page (Gold Noir). Reuses tokens from style.css
+   ============================================================ */
+
+/* ── Menu hero / title ── */
+.menu-hero {
+  position: relative;
+  padding: 7.5rem 1.5rem 1.5rem;
+  text-align: center;
+}
+.menu-hero__kicker {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.menu-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  line-height: 1.05;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+.menu-hero__title .accent { color: var(--accent); }
+.menu-hero__quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 1.4rem auto 0;
+}
+
+/* ── Sticky tab bar (sits below the fixed navbar) ── */
+.tabbar {
+  position: sticky;
+  top: 3.9rem;          /* sit just below the fixed v1 navbar (~62px) */
+  z-index: 90;
+  margin-top: 1.5rem;
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(200, 133, 42, 0.18);
+  border-bottom: 1px solid rgba(200, 133, 42, 0.18);
+}
+.tabbar__inner {
+  display: flex;
+  gap: 0.4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabbar__inner::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0.6rem 1.15rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: color var(--transition), background-color var(--transition), border-color var(--transition);
+}
+.tab-btn:hover { color: var(--text-primary); }
+.tab-btn.active {
+  color: var(--bg-primary);
+  background-color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+/* ── Menu body ── */
+.menu { max-width: 1100px; margin: 0 auto; padding: 2.6rem 1.5rem 4.5rem; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ── Category ── */
+.menu-cat { margin-bottom: 3.2rem; }
+.menu-cat:last-child { margin-bottom: 0; }
+.menu-cat__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.menu-cat__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3.6vw, 2.3rem);
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+.menu-cat__price {
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  white-space: nowrap;
+  padding: 0.32rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(200, 133, 42, 0.4);
+}
+.menu-cat__rule {
+  width: 64px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), rgba(200, 133, 42, 0.15));
+  margin-bottom: 1.7rem;
+}
+.menu-cat__sub {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 1.8rem 0 1rem;
+  padding-left: 0.1rem;
+}
+.menu-cat__sub:first-of-type { margin-top: 0; }
+
+/* ── Item grid ── */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.6rem;
+  row-gap: 0.2rem;
+}
+.menu-item {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(200, 133, 42, 0.12);
+}
+.menu-item__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+.menu-item__name {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+.menu-item__name .tag {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-left: 0.4rem;
+}
+.menu-item__price {
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.menu-item__country {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.85;
+  margin-top: 0.25rem;
+}
+.menu-item__desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+/* entrance animation when a tab becomes active */
+.tab-content.active .menu-item {
+  opacity: 0;
+  animation: menuIn 0.5s ease forwards;
+  animation-delay: var(--d, 0s);
+}
+@keyframes menuIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* ── Footer team block ── */
+.menu-team {
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  padding: 2.2rem;
+  border-radius: 10px;
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(200, 133, 42, 0.25);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-team__title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.menu-team__people { display: flex; flex-direction: column; gap: 0.5rem; }
+.menu-team__person { font-size: 0.95rem; color: var(--text-primary); }
+.menu-team__person span { color: var(--text-muted); font-style: italic; }
+.menu-team__contacts { display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.95rem; }
+.menu-team__contacts a, .menu-team__contacts p {
+  display: flex; align-items: center; gap: 0.6rem; color: var(--text-primary); transition: color var(--transition);
+}
+.menu-team__contacts a:hover { color: var(--accent); }
+.menu-team__contacts svg { color: var(--accent); flex-shrink: 0; }
+
+@media (max-width: 700px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  .menu-team { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tab-content.active .menu-item { opacity: 1; animation: none; }
+}

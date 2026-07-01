@@ -1,0 +1,19 @@
+# OS / editor
+.DS_Store
+.claude/
+scratchpad.md
+
+# Not part of the deployed site
+docs/
+redirect_index.html
+
+# Raw source photos & stray images (kept locally, not deployed)
+DSC*.jpg
+*.JPG
+Pozzo*.webp
+Favicon-*.png
+Favicon-*.webp
+cropped-Favicon-*.png
+bg-6*.jpg
+gallery-*.jpg
+Screenshot*.png
