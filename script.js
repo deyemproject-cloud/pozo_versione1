@@ -12,14 +12,26 @@
     }
   }, { passive: true });
 
-  navToggle.addEventListener('click', function () {
-    navLinks.classList.toggle('open');
+  function setMenu(open) {
+    navLinks.classList.toggle('open', open);
+    navToggle.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  navToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setMenu(!navLinks.classList.contains('open'));
   });
 
   navAnchors.forEach(function (link) {
-    link.addEventListener('click', function () {
-      navLinks.classList.remove('open');
-    });
+    link.addEventListener('click', function () { setMenu(false); });
+  });
+
+  // Close the mobile menu when tapping outside the navbar
+  document.addEventListener('click', function (e) {
+    if (navLinks.classList.contains('open') && !e.target.closest('.navbar')) {
+      setMenu(false);
+    }
   });
 
   const fadeEls = document.querySelectorAll('.fade-in');
