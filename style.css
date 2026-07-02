@@ -22,7 +22,7 @@ body {
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.6;
-  overflow-x: hidden;   /* guard against mobile horizontal scroll */
+  overflow-x: clip;   /* guard against horizontal scroll WITHOUT breaking position:fixed on iOS Safari */
 }
 body::after {
   content: '';
