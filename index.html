@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <a href="#chi-siamo" class="skip-link">Vai al contenuto</a>
@@ -71,23 +71,27 @@
     </div>
   </section>
 
-  <!-- COCKTAIL GALLERY -->
+  <!-- COCKTAIL CAROUSEL -->
   <section class="gallery fade-in" id="cocktail" aria-label="Fotografie dei cocktail d'autore">
     <div class="container">
-      <div class="gallery__grid">
-        <figure class="gallery__item"><img src="assets/ginozzo.webp" alt="Gin Ozzo — highball con lime, zenzero e ghiaccio cristallino" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/modena.webp" alt="Modena Friends — cocktail on the rocks con ananas disidratato e menta" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/margarita.webp" alt="Red Margarita — coppa col bordo di sale, lime e peperoncino" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/pinacolada.webp" alt="Piña Colada — cremosa in coppa con ananas e ciliegia" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/cocktail1-hero.webp" alt="Cocktail sour rosso d'autore del Pozzo American Bar" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/cocktail2-hero.webp" alt="Long drink con guarnizione di agrume disidratato" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/cocktail3-hero.webp" alt="Sour d'autore con schiuma vellutata" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/cocktail4-hero.webp" alt="Long drink al pompelmo con twist d'agrume" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/cocktail1-close.webp" alt="Dettaglio macro della schiuma del sour rosso" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/cocktail2-close.webp" alt="Dettaglio macro dell'agrume disidratato sul ghiaccio" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/cocktail3-close.webp" alt="Dettaglio macro della schiuma speziata del sour" loading="lazy"></figure>
-        <figure class="gallery__item"><img src="assets/cocktail4-close.webp" alt="Dettaglio macro del twist di pompelmo" loading="lazy"></figure>
+      <h2 class="section__title">I nostri cocktail</h2>
+    </div>
+    <div class="carousel">
+      <button class="carousel__arrow carousel__arrow--prev" id="carouselPrev" type="button" aria-label="Scorri indietro" aria-controls="cocktailTrack">&lsaquo;</button>
+      <div class="carousel__track" id="cocktailTrack" tabindex="0" role="group" aria-label="Galleria cocktail scorrevole">
+        <figure class="carousel__item"><img src="assets/ginozzo.webp" alt="Gin Ozzo — highball con lime, zenzero e ghiaccio cristallino" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/modena.webp" alt="Modena Friends — cocktail on the rocks con ananas disidratato e menta" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/pinacolada.webp" alt="Piña Colada — cremosa in coppa con ananas e ciliegia" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/cocktail1-hero.webp" alt="Cocktail sour rosso d'autore del Pozzo American Bar" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/cocktail2-hero.webp" alt="Long drink con guarnizione di agrume disidratato" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/cocktail3-hero.webp" alt="Sour d'autore con schiuma vellutata" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/cocktail4-hero.webp" alt="Long drink al pompelmo con twist d'agrume" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/cocktail1-close.webp" alt="Dettaglio macro della schiuma del sour rosso" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/cocktail2-close.webp" alt="Dettaglio macro dell'agrume disidratato sul ghiaccio" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/cocktail3-close.webp" alt="Dettaglio macro della schiuma speziata del sour" loading="lazy"></figure>
+        <figure class="carousel__item"><img src="assets/cocktail4-close.webp" alt="Dettaglio macro del twist di pompelmo" loading="lazy"></figure>
       </div>
+      <button class="carousel__arrow carousel__arrow--next" id="carouselNext" type="button" aria-label="Scorri avanti" aria-controls="cocktailTrack">&rsaquo;</button>
     </div>
   </section>
 
@@ -177,6 +181,6 @@
     <p>&copy; 2026 Pozzo American Bar &mdash; Pavia</p>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

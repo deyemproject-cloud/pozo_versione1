@@ -64,4 +64,23 @@
   document.querySelectorAll('.cocktail .card').forEach(function (card, i) {
     card.style.setProperty('--stagger', (i * 0.04) + 's');
   });
+
+  // Cocktail carousel arrows
+  var track = document.getElementById('cocktailTrack');
+  var prevBtn = document.getElementById('carouselPrev');
+  var nextBtn = document.getElementById('carouselNext');
+  if (track && prevBtn && nextBtn) {
+    var step = function () {
+      var first = track.querySelector('.carousel__item');
+      if (!first) return track.clientWidth * 0.8;
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 16;
+      return first.getBoundingClientRect().width + gap;
+    };
+    prevBtn.addEventListener('click', function () {
+      track.scrollBy({ left: -step(), behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', function () {
+      track.scrollBy({ left: step(), behavior: 'smooth' });
+    });
+  }
 })();
