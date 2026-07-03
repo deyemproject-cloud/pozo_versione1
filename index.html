@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <a href="#chi-siamo" class="skip-link">Vai al contenuto</a>
@@ -28,9 +28,10 @@
     <ul class="navbar__links" id="navLinks">
       <li><a href="#chi-siamo">Chi siamo</a></li>
       <li><a href="menu.html">Menù</a></li>
+      <li><a href="#happy-hour">Happy Hour</a></li>
+      <li><a href="#locale">Il locale</a></li>
       <li><a href="#orari">Orari</a></li>
       <li><a href="#contatti">Contatti</a></li>
-      <li><a href="#happy-hour">Happy Hour</a></li>
     </ul>
   </nav>
 
@@ -49,8 +50,23 @@
     <div class="container">
       <h2 class="section__title">Chi siamo</h2>
       <p class="chi-siamo__text">
-        Uno dei locali simbolo di Pavia. Dal 1983, cocktail d&rsquo;autore nati
-        dall&rsquo;esperienza di Fabio e del suo staff.
+        Dal 1983 il Pozzo &egrave; uno dei locali simbolo di Pavia: un American bar
+        dove la tradizione della grande miscelazione incontra l&rsquo;atmosfera
+        intima di una sala dal fascino antico, tra mattoni a vista, luci soffuse
+        e i celebri accenti blu che da sempre ci contraddistinguono.
+      </p>
+      <p class="chi-siamo__text">
+        A guidarci sono la passione e l&rsquo;esperienza di Fabio e del suo staff:
+        oltre quarant&rsquo;anni di cocktail d&rsquo;autore, distillati ricercati e
+        una carta che cresce stagione dopo stagione senza mai perdere la propria
+        identit&agrave;. Ogni drink nasce da ingredienti selezionati, ghiaccio
+        cristallino e la cura per il dettaglio che ci ha reso un punto di
+        riferimento in citt&agrave;.
+      </p>
+      <p class="chi-siamo__text">
+        Che sia per un aperitivo con gli amici, un dopocena o una serata speciale,
+        al Pozzo troverai sempre lo stesso spirito: accoglienza sincera, musica
+        giusta e un bicchiere fatto come si deve. Ti aspettiamo.
       </p>
     </div>
   </section>
@@ -59,6 +75,10 @@
   <section class="gallery fade-in" id="cocktail" aria-label="Fotografie dei cocktail d'autore">
     <div class="container">
       <div class="gallery__grid">
+        <figure class="gallery__item"><img src="assets/ginozzo.webp" alt="Gin Ozzo — highball con lime, zenzero e ghiaccio cristallino" loading="lazy"></figure>
+        <figure class="gallery__item"><img src="assets/modena.webp" alt="Modena Friends — cocktail on the rocks con ananas disidratato e menta" loading="lazy"></figure>
+        <figure class="gallery__item"><img src="assets/margarita.webp" alt="Red Margarita — coppa col bordo di sale, lime e peperoncino" loading="lazy"></figure>
+        <figure class="gallery__item"><img src="assets/pinacolada.webp" alt="Piña Colada — cremosa in coppa con ananas e ciliegia" loading="lazy"></figure>
         <figure class="gallery__item"><img src="assets/cocktail1-hero.webp" alt="Cocktail sour rosso d'autore del Pozzo American Bar" loading="lazy"></figure>
         <figure class="gallery__item"><img src="assets/cocktail2-hero.webp" alt="Long drink con guarnizione di agrume disidratato" loading="lazy"></figure>
         <figure class="gallery__item"><img src="assets/cocktail3-hero.webp" alt="Sour d'autore con schiuma vellutata" loading="lazy"></figure>
@@ -75,13 +95,35 @@
   <section class="section happy-hour fade-in" id="happy-hour">
     <div class="container">
       <h2 class="section__title">Happy Hour</h2>
-      <p class="happy-hour__intro">Ogni sera dalle 18:00 alle 20:00</p>
+      <p class="happy-hour__intro">Aperitivo con buffet &middot; ogni sera dalle 18:00 alle 22:00</p>
       <div class="happy-hour__card">
-        <p class="happy-hour__deal">Cocktail d&rsquo;autore &amp; taglieri a prezzo speciale</p>
+        <p class="happy-hour__deal">Il tuo cocktail &amp; buffet a volont&agrave;</p>
         <p class="happy-hour__note">
-          Vieni a trovarci per l&rsquo;aperitivo e goditi la nostra selezione
-          in un&rsquo;atmosfera unica.
+          Ordina il tuo drink e accompagnalo con il nostro ricco buffet:
+          sfizi caldi, fritti croccanti, taglieri, focacce e stuzzichini
+          sempre freschi. Aperitivo all&rsquo;italiana, nell&rsquo;atmosfera blu
+          del Pozzo.
         </p>
+      </div>
+      <div class="aperitivo__gallery">
+        <figure class="aperitivo__item aperitivo__item--tall"><img src="assets/aperitivo-1.webp" alt="Piatto di aperitivo con Aperol Spritz, fritti, focaccia e verdure al bancone del Pozzo" loading="lazy"></figure>
+        <figure class="aperitivo__item aperitivo__item--wide"><img src="assets/aperitivo-2.webp" alt="Tavolata di aperitivo con più Spritz e vassoi di stuzzichini misti" loading="lazy"></figure>
+        <figure class="aperitivo__item aperitivo__item--tall"><img src="assets/aperitivo-3.webp" alt="Dettaglio macro di crocchette e sfizi fritti dorati del buffet" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- IL LOCALE -->
+  <section class="section locale fade-in" id="locale">
+    <div class="container">
+      <h2 class="section__title">Il locale</h2>
+      <p class="locale__intro">
+        Mattoni a vista, luci calde e i nostri accenti blu: uno spazio intimo
+        nel cuore di Pavia, dove sentirsi a casa sorseggiando un buon drink.
+      </p>
+      <div class="locale__gallery">
+        <figure class="locale__item"><img src="assets/locale-2.webp" alt="Il bancone bar del Pozzo con bottiglie illuminate dai LED blu" loading="lazy"></figure>
+        <figure class="locale__item"><img src="assets/locale-1.webp" alt="La sala lounge del Pozzo con divani, mattoni a vista e il quadro del rinoceronte" loading="lazy"></figure>
       </div>
     </div>
   </section>

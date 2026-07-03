@@ -224,7 +224,10 @@ img { display: block; max-width: 100%; }
   max-width: 680px;
   line-height: 1.8;
   font-style: italic;
+  position: relative;
+  z-index: 1;
 }
+.chi-siamo__text + .chi-siamo__text { margin-top: 1.4rem; }
 
 /* ── Cocktail ── */
 .cocktail__intro {
@@ -421,4 +424,79 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 360px) {
   .gallery__grid { grid-template-columns: 1fr; gap: 1.1rem; }
+}
+
+/* ── Aperitivo gallery (Happy Hour) ── */
+.aperitivo__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 0.9rem;
+  margin-top: 3rem;
+}
+.aperitivo__item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(200, 133, 42, 0.28);
+  background-color: var(--bg-secondary);
+  box-shadow: 0 8px 28px rgba(18, 8, 0, 0.5);
+}
+.aperitivo__item--tall { aspect-ratio: 4 / 5; }
+.aperitivo__item--wide { aspect-ratio: 3 / 2; align-self: center; }
+.aperitivo__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.95) saturate(1.05);
+  transition: transform 0.6s ease, filter 0.5s ease;
+}
+.aperitivo__item:hover { border-color: var(--accent); }
+.aperitivo__item:hover img { transform: scale(1.05); filter: brightness(1.08) saturate(1.2); }
+
+@media (max-width: 760px) {
+  .aperitivo__gallery { grid-template-columns: 1fr 1fr; }
+  .aperitivo__item--wide { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+  .aperitivo__gallery { grid-template-columns: 1fr; }
+}
+
+/* ── Il locale ── */
+.locale__intro {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+  font-style: italic;
+  color: var(--text-primary);
+  max-width: 680px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+.locale__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.locale__item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(200, 133, 42, 0.28);
+  background-color: var(--bg-secondary);
+  aspect-ratio: 3 / 2;
+  box-shadow: 0 8px 28px rgba(18, 8, 0, 0.5);
+}
+.locale__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.95) saturate(1.05);
+  transition: transform 0.6s ease, filter 0.5s ease;
+}
+.locale__item:hover { border-color: var(--accent); }
+.locale__item:hover img { transform: scale(1.04); filter: brightness(1.08) saturate(1.2); }
+
+@media (max-width: 700px) {
+  .locale__gallery { grid-template-columns: 1fr; }
 }
