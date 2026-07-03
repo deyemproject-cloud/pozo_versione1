@@ -65,22 +65,89 @@
     card.style.setProperty('--stagger', (i * 0.04) + 's');
   });
 
-  // Cocktail carousel arrows
+  // Cocktail carousel: arrows, dots, autoplay
+  var carousel = document.querySelector('#cocktail .carousel');
   var track = document.getElementById('cocktailTrack');
   var prevBtn = document.getElementById('carouselPrev');
   var nextBtn = document.getElementById('carouselNext');
-  if (track && prevBtn && nextBtn) {
-    var step = function () {
-      var first = track.querySelector('.carousel__item');
-      if (!first) return track.clientWidth * 0.8;
-      var gap = parseFloat(getComputedStyle(track).columnGap) || 16;
-      return first.getBoundingClientRect().width + gap;
-    };
-    prevBtn.addEventListener('click', function () {
-      track.scrollBy({ left: -step(), behavior: 'smooth' });
+  var dotsWrap = document.getElementById('carouselDots');
+
+  if (track) {
+    var items = Array.prototype.slice.call(track.querySelectorAll('.carousel__item'));
+    var current = 0;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Build one dot per slide
+    var dots = [];
+    if (dotsWrap) {
+      items.forEach(function (_, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'carousel__dot';
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-label', 'Vai alla foto ' + (i + 1));
+        b.addEventListener('click', function () { goTo(i, true); });
+        dotsWrap.appendChild(b);
+        dots.push(b);
+      });
+    }
+
+    function leftFor(i) {
+      return items[i].offsetLeft - items[0].offsetLeft;
+    }
+    function setActive(i) {
+      current = i;
+      dots.forEach(function (d, di) { d.classList.toggle('active', di === i); });
+    }
+    function goTo(i, user) {
+      i = (i + items.length) % items.length;
+      track.scrollTo({ left: leftFor(i), behavior: 'smooth' });
+      setActive(i);
+      if (user) restart();
+    }
+
+    // Keep the active dot in sync while the user swipes/scrolls
+    var raf;
+    track.addEventListener('scroll', function () {
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function () {
+        var pos = track.scrollLeft;
+        var best = 0, bestDist = Infinity;
+        items.forEach(function (item, i) {
+          var d = Math.abs(leftFor(i) - pos);
+          if (d < bestDist) { bestDist = d; best = i; }
+        });
+        setActive(best);
+      });
+    }, { passive: true });
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1, true); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1, true); });
+
+    // Autoplay (respects reduced-motion; pauses on interaction / hidden tab)
+    var timer = null;
+    function play() {
+      if (reduceMotion || timer) return;
+      timer = setInterval(function () { goTo(current + 1, false); }, 4000);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+    function restart() { stop(); play(); }
+
+    if (carousel) {
+      carousel.addEventListener('pointerenter', stop);
+      carousel.addEventListener('pointerleave', play);
+      carousel.addEventListener('focusin', stop);
+      carousel.addEventListener('focusout', play);
+    }
+    track.addEventListener('touchstart', stop, { passive: true });
+    track.addEventListener('touchend', function () { restart(); }, { passive: true });
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) { stop(); } else { play(); }
     });
-    nextBtn.addEventListener('click', function () {
-      track.scrollBy({ left: step(), behavior: 'smooth' });
-    });
+
+    setActive(0);
+    play();
   }
 })();

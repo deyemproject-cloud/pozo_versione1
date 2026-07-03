@@ -416,7 +416,7 @@ img { display: block; max-width: 100%; }
   border: 1px solid rgba(200, 133, 42, 0.28);
   background-color: var(--bg-secondary);
   box-shadow: 0 8px 28px rgba(18, 8, 0, 0.5);
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 .carousel__item img {
   width: 100%;
@@ -455,6 +455,28 @@ img { display: block; max-width: 100%; }
 .carousel__arrow:active { transform: translateY(-50%) scale(0.94); }
 .carousel__arrow--prev { left: clamp(0.5rem, 2vw, 1.5rem); }
 .carousel__arrow--next { right: clamp(0.5rem, 2vw, 1.5rem); }
+
+/* Dots / indicators */
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.6rem;
+  padding: 0 1rem;
+}
+.carousel__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(200, 133, 42, 0.3);
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+.carousel__dot:hover { background-color: rgba(200, 133, 42, 0.6); }
+.carousel__dot.active { background-color: var(--accent); transform: scale(1.35); }
 
 /* Touch / small screens: rely on native swipe, hide arrows */
 @media (max-width: 700px) {
