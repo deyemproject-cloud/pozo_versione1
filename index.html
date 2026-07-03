@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-  <a href="#cocktail" class="skip-link">Vai al contenuto</a>
+  <a href="#chi-siamo" class="skip-link">Vai al contenuto</a>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
@@ -27,10 +27,10 @@
     </button>
     <ul class="navbar__links" id="navLinks">
       <li><a href="#chi-siamo">Chi siamo</a></li>
-      <li><a href="#cocktail">Cocktail</a></li>
       <li><a href="menu.html">Menù</a></li>
       <li><a href="#orari">Orari</a></li>
       <li><a href="#contatti">Contatti</a></li>
+      <li><a href="#happy-hour">Happy Hour</a></li>
     </ul>
   </nav>
 
@@ -56,7 +56,7 @@
   </section>
 
   <!-- COCKTAIL GALLERY -->
-  <section class="gallery fade-in" aria-label="Fotografie dei cocktail d'autore">
+  <section class="gallery fade-in" id="cocktail" aria-label="Fotografie dei cocktail d'autore">
     <div class="container">
       <div class="gallery__grid">
         <figure class="gallery__item"><img src="assets/cocktail1-hero.webp" alt="Cocktail sour rosso d'autore del Pozzo American Bar" loading="lazy"></figure>
@@ -71,31 +71,17 @@
     </div>
   </section>
 
-  <!-- COCKTAIL -->
-  <section class="section cocktail fade-in" id="cocktail">
+  <!-- HAPPY HOUR -->
+  <section class="section happy-hour fade-in" id="happy-hour">
     <div class="container">
-      <h2 class="section__title">I nostri cocktail</h2>
-      <p class="cocktail__intro">Cocktail d&rsquo;autore</p>
-      <div class="cocktail__grid">
-        <div class="card"><span class="card__name">Gin-Ozzo</span></div>
-        <div class="card"><span class="card__name">M.B.C.</span></div>
-        <div class="card"><span class="card__name">Brezza del Monferrato</span></div>
-        <div class="card"><span class="card__name">Modena Friends</span></div>
-        <div class="card"><span class="card__name">Self</span></div>
-        <div class="card"><span class="card__name">Salvy</span></div>
-        <div class="card"><span class="card__name">Casanova</span></div>
-        <div class="card"><span class="card__name">Mara-Pisco</span></div>
-        <div class="card"><span class="card__name">Cinzano Blues</span></div>
-        <div class="card"><span class="card__name">Well Done</span></div>
-        <div class="card"><span class="card__name">Colorado Rhino</span></div>
-        <div class="card"><span class="card__name">ERIKA by Mattia Pastori</span></div>
-        <div class="card"><span class="card__name">Light Sex</span></div>
-        <div class="card"><span class="card__name">Peach-one</span></div>
-        <div class="card"><span class="card__name">Bianca Edmea</span></div>
-        <div class="card"><span class="card__name">Re...nato</span></div>
-        <div class="card"><span class="card__name">Chi Hua-Hua</span></div>
-        <div class="card"><span class="card__name">Red Emotion</span></div>
-        <div class="card"><span class="card__name">Basil-Jito</span></div>
+      <h2 class="section__title">Happy Hour</h2>
+      <p class="happy-hour__intro">Ogni sera dalle 18:00 alle 20:00</p>
+      <div class="happy-hour__card">
+        <p class="happy-hour__deal">Cocktail d&rsquo;autore &amp; taglieri a prezzo speciale</p>
+        <p class="happy-hour__note">
+          Vieni a trovarci per l&rsquo;aperitivo e goditi la nostra selezione
+          in un&rsquo;atmosfera unica.
+        </p>
       </div>
     </div>
   </section>
